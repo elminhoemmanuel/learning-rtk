@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+// *{
+//     font-family: 'Fira Sans', sans-serif;
+// }
+
+// html, body{
+//     height: 100%;
+//     margin:0;
+//     padding:0;
+//     position: relative;
+//     color: #bbb8b8;
+// }
+
+// #app {
+//     padding: 2em;
+//   }
+
+// .person .person-one figure,
+// .person .person-two figure {
+//   background-color: black;
+//   display: block;
+//   position: absolute;
+// }
+
+// .person .person-one .head,
+// .person .person-two .head {
+//   border-radius: 999px;
+//   width: 120px;
+//   height: 100px;
+//   left: 22.3rem;
+//   top: 6rem;
+// }
+
+// .person .person-one .body,
+// .person .person-two .body {
+//   border-radius: 30px 30px 0 0;
+//   height: 200px;
+//   top: 11.5rem;
+//   width: 190px;
+// }
+
+// .person .person-one .body:before,
+// .person .person-one .body:after,
+// .person .person-two .body:before,
+// .person .person-two .body:after {
+//   content: "";
+//   position: absolute;
+//   background-color: black;
+//   width: 50px;
+//   height: 100px;
+//   top: 11rem;
+  
+// }
+
+// .person .person-one .body:before,
+// .person .person-two .body:before {
+//   left: 16px;
+// }
+
+// .person .person-one .body:after,
+// .person .person-two .body:after {
+//   left: 120px;
+// }
+
+html, body {
+  }
+  
+  #cartoon {
+    --line: #222;
+    --skin: #fca;
+    --hair: #963;
+    --iris: #69c;
+    --shirt: #fff;
+    --shadow: #5002;
+    width: 80vmin;
+    height: 80vmin;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: var(--line);
+  }
+  
+  #cartoon div,
+  #cartoon div.ha,
+  #cartoon div.hb {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .neck {
+    background: var(--skin);
+    background-image: radial-gradient(circle at 50% -20%, var(--shadow) 65%, #0000 0);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 0.5vmin solid;
+    border-bottom: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0);
+  }
+  
+  .face {
+    height: 60%;
+    background: var(--skin);
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    border-radius: 100% / 50% 50% 120% 120%;
+    border: 0.5vmin solid;
+    border-bottom-width: 0.85vmin;
+    border-top-width: 0.33vmin;
+    box-shadow:
+      inset -1.25vmin 0 var(--shadow),
+      inset 0.75vmin 0 var(--shadow)
+  }
+  
+  .body {
+    background: var(--skin);
+    border-radius: 200% / 75% 80%;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 
+      0 -0.5vmin 0 0.125vmin,
+      inset 0 0.5vmin var(--shadow);
+    background-image:
+      radial-gradient(circle at 50% -20%, var(--skin) 27%, var(--skin) 0 28%, transparent 0);
+  }
